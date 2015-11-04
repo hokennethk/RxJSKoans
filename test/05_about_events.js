@@ -19,7 +19,8 @@ test('the main event', function () {
 
   subscription.dispose();
 
+  // no longer subscribed
   e.emit('change', '!');
 
-  equal(__, received.join(''));
+  equal('RxJS', received.join(''));
 });
